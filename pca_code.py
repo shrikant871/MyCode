@@ -15,9 +15,9 @@ def PCA_processing(columndata):
 
 pandas.options.mode.chained_assignment = None
 
-dbcon = pymysql.connect(host="localhost", user="root", password = "rootroot", db="stackdata")
+dbcon = pymysql.connect(host="localhost", user="root", password = "********", db="stackdata")
 
-insertcursor = create_engine("mysql+pymysql://{user}:{pw}@localhost:3306/{db}".format(user="root",pw="rootroot",db="stackdata"))
+insertcursor = create_engine("mysql+pymysql://{user}:{pw}@localhost:3306/{db}".format(user="root",pw="********",db="stackdata"))
 
 sqlselect = pandas.read_sql_query('''select u.user_id, u.reputation, u.up_vote_count, u.badge_gold, t.count from stack_user u, stack_usertags t where t.tag = 'c++' and u.user_id = t.user_id''', dbcon)
 datafr = pandas.DataFrame(sqlselect, columns=['user_id', 'reputation', 'up_vote_count', 'badge_gold', 'count'])
