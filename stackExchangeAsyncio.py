@@ -16,7 +16,7 @@ import asyncio
 dbcon = mysql.connector.connect(
 host="localhost",
 user="root",
-password="rootroot",
+password="********",
 database="stackdata"
 )
 
