@@ -8,7 +8,7 @@ nextpage = True
 dbcon = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="rootroot",
+  password="**********",
   database="github_data"
 )
 
